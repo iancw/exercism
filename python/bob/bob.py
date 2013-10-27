@@ -2,10 +2,10 @@
 class Bob:
 
 	def hey(self, message):
-		if message is None or len(message.strip()) == 0:
+		if not message or not message.strip():
 			return 'Fine. Be that way!'
                 # Convert from a string object to a unicode object
-                # for correct umlaut matching
+                # for correct umlaut handling
 		message = message.decode('latin-1')
 		if message.isupper():
 			return 'Woah, chill out!'
